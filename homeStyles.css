@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Mukta:wght@300;400;500&family=Noto+Sans:wght@100;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header .header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+}
+
+#cancel {
+  display: none;
+}
+
+nav .nav-list {
+  width: 100%;
+  height: 0;
+  background-color: #ffffff;
+  position: fixed;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 99999999;
+  border-top: 1px solid #e1e1e18c;
+}
+
+.opened {
+  width: 100%;
+  height: 600px;
+  transition: 0.5s ease-in-out;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-bttn {
+  position: absolute;
+  right: 20px;
+  width: 90px !important;
+}
+
+.lists {
+  padding: 30px;
+  text-align: center;
+  color: #262626;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+
+.lists:hover {
+  color: #0042c6;
+  transition: 0.5s ease-in-out;
+}
+
+.search-input {
+  width: 55%;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #9f9f9f;
+  border-radius: 50px;
+}
+
+.search-input::placeholder {
+  padding: 20px;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+section .debit-card {
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contents {
+  align-self: flex-start;
+  margin: 20px;
+}
+
+.card {
+  margin: 50px;
+}
+
+.credit {
+  font-size: 33px;
+  font-family: "Lora", serif;
+  font-weight: 600;
+  color: #0042c6;
+}
+
+.learn {
+  color: #0042c6;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.info {
+  margin-top: 10px;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.apply-btn {
+  width: 130px;
+  height: 40px;
+  background-color: #0042c6;
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 13px;
+  margin: 30px 0 30px 0px;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+}
+
+.summary {
+  color: #0042c6;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+}
+
+.up {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  z-index: 9999999999;
+}
+
+.offer-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.offer-main {
+  width: 90%;
+  height: 60vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: scroll;
+}
+
+.first {
+  width: 100%;
+  height: 55vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  margin: 5px;
+  box-shadow: 0px 2px 5px #e1e1e1;
+  transition: 0.5s ease-in-out;
+}
+
+.img {
+  width: 100%;
+  flex-grow: 1;
+  background-color: yellow;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.img-sec-one {
+  background-image: url("images/first .jpg");
+}
+
+.img-sec-two {
+  background-image: url("images/man.jpg");
+}
+
+.img-sec-three {
+  background-image: url("images/smiling-girl.jpg");
+}
+
+.info-sec {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.slider {
+  height: 55vh;
+  min-width: 300%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.title {
+  font-size: 20px;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  color: #0042c6;
+}
+
+.info-holder {
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+}
+
+.information {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.learn-more {
+  width: 130px;
+  height: 40px;
+  border: 2px solid #0042c6;
+  background: transparent;
+  color: #0042c6;
+  border-radius: 50px;
+  font-size: 13px;
+  margin: 30px 0 30px 0px;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+}
+
+.alice-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.check-alice {
+  font-size: 30px;
+  font-family: "Lora", serif;
+}
+
+.works {
+  margin: 30px;
+}
+
+.how {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.works-info {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #5b5b5b;
+}
+
+.details-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  text-align: center;
+  margin: 20px;
+}
+
+.join {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.sign {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #5b5b5b;
+}
+
+.owners {
+  width: 100%;
+  height: 70vh;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: space-around;
+}
+
+.million-header {
+  font-family: "Lora", serif;
+  font-weight: 550;
+  font-size: 30px;
+  text-align: center;
+}
+
+.million-info {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #5b5b5b;
+  text-align: center;
+  padding: 5px;
+}
+
+.owners-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature {
+  width: 100%;
+  height: 30vh;
+}
+
+.feature-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.featured {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin: 20px;
+}
+
+.terms {
+  width: 100%;
+  height: 100vh;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terms-info {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  color: #5b5b5b;
+  padding: 20px;
+}
+
+.summary {
+  color: #0042c6;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+footer .footer-container .foot {
+  width: 100%;
+  height: 100vh;
+  background-color: #0042c6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.company-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 10px 10px 0;
+}
+
+.titled {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.download-img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dwn {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.medias {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 30px;
+  opacity: 0.9;
+}
+
+.rights {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 400;
+  margin: 30px;
+}

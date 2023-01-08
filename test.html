@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+
+  <body>
+    <input type="text" id="txt" />
+    <button id="button" onclick="setFile()" type="button">set</button>
+
+    <p id="fetched">kelvin</p>
+
+    <button id="button" onclick="change()" type="button">fetch</button>
+    <script type="text/javascript" charset="utf-8">
+      const arr = [];
+
+      const setFile = () => {
+        const text = document.getElementById("txt").value;
+
+        arr.push(text);
+
+        const setting = localStorage.setItem("names", text);
+        const settings = localStorage.setItem("filess", "chemistry");
+      };
+      
+      let = temp = "";
+
+      window.onload = () => {
+        const fetch = document.getElementById("fetched");
+        const getItems = localStorage.getItem("names");
+
+        //fetch.innerHTML = back
+        if (getItems !== null) fetch.innerHTML = getItems;
+      };
+    </script>
+  </body>
+</html>

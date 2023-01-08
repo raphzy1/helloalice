@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="homeStyles.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="application.css" type="text/css" media="all" />
+    <script src="homeFunctions.js" type="text/javascript" charset="utf-8"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="faq.css" type="text/css" media="all" />
+    <script src="homeFunctions.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+  <header class="header" id="header">
+      <div class="header-container" id="header-container">
+        <div class="icons-nav" id="icons" style="position: relative">
+            <svg id="bar" onclick='toggle()' style="margin: 20px" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="40" y1="128" x2="216" y2="128" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="40" y1="64" x2="216" y2="64" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="40" y1="192" x2="216" y2="192" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>
+            <svg id="cancel" onclick="toggleout()" style="margin: 20px" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#00374a" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="200" y1="56" x2="56" y2="200" fill="none" stroke="#00374a" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></line><line x1="200" y1="200" x2="56" y2="56" fill="none" stroke="#00374a" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></line></svg>
+        </div>
+        <img class="alice" src="images/alice.png" height="100" width="100" alt="alice" />
+      </div>
+      <nav>
+        <div class="nav-list" id="nav-list">
+          <ul>
+            <li class="lists">FUNDING</li>
+            <li class="lists">PARTNERSHIP</li>
+            <li class="lists">COMPANY</li>
+            <li class="lists">BLOG</li>
+          </ul>
+          <button class="apply-btn" type="button">Login</button>
+          <div class="search">
+            <input type="text" class="search-input" placeholder="Search" />
+            <button class="learn-more" type="button">Search</button>
+          </div>
+          <div class="social-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0042C6" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="40" fill="none" stroke="#0042C6" stroke-miterlimit="10" stroke-width="16"></circle><rect x="36" y="36" width="184" height="184" rx="48" fill="none" stroke="#0042C6" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><circle cx="180" cy="76" r="12"></circle></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0042C6" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M232,84v40a8,8,0,0,1-8,8,103.2,103.2,0,0,1-48-11.7V156A76,76,0,1,1,86.6,81.2a8,8,0,0,1,6.5,1.7A7.8,7.8,0,0,1,96,89.1v41.6a7.9,7.9,0,0,1-4.6,7.2A20,20,0,1,0,120,156V28a8,8,0,0,1,8-8h40a8,8,0,0,1,8,8,48,48,0,0,0,48,48A8,8,0,0,1,232,84Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0042C6" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M232,128a104.3,104.3,0,0,1-91.5,103.3,4.1,4.1,0,0,1-4.5-4V152h24a8,8,0,0,0,8-8.5,8.2,8.2,0,0,0-8.3-7.5H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,8-8.5,8.2,8.2,0,0,0-8.3-7.5H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0-8,8.5,8.2,8.2,0,0,0,8.3,7.5H120v75.3a4,4,0,0,1-4.4,4C62.8,224.9,22,179,24.1,124.1A104,104,0,0,1,232,128Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0042C6" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M245.7,77.7l-30.2,30.1C209.5,177.7,150.5,232,80,232c-14.5,0-26.5-2.3-35.6-6.8-7.3-3.7-10.3-7.6-11.1-8.8a8,8,0,0,1,3.9-11.9c.2-.1,23.8-9.1,39.1-26.4a108.6,108.6,0,0,1-24.7-24.4c-13.7-18.6-28.2-50.9-19.5-99.1a8.1,8.1,0,0,1,5.5-6.2,8,8,0,0,1,8.1,1.9c.3.4,33.6,33.2,74.3,43.8V88a48.3,48.3,0,0,1,48.6-48,48.2,48.2,0,0,1,41,24H240a8,8,0,0,1,7.4,4.9A8.4,8.4,0,0,1,245.7,77.7Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0042C6" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M212,28H44A16,16,0,0,0,28,44V212a16,16,0,0,0,16,16H212a16,16,0,0,0,16-16V44A16,16,0,0,0,212,28ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,92a12,12,0,1,1,12-12A12,12,0,0,1,88,92Zm96,84a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.8-1.8A36,36,0,0,1,184,140Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0042C6" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M234.3,69.8a23.5,23.5,0,0,0-14.5-16.3C185.6,40.3,131,40.4,128,40.4s-57.6-.1-91.8,13.1A23.5,23.5,0,0,0,21.7,69.8C19.1,79.7,16,97.9,16,128s3.1,48.3,5.7,58.2a23.5,23.5,0,0,0,14.5,16.3c32.8,12.7,84.2,13.1,91.1,13.1h1.4c6.9,0,58.3-.4,91.1-13.1a23.5,23.5,0,0,0,14.5-16.3c2.6-9.9,5.7-28.1,5.7-58.2S236.9,79.7,234.3,69.8Zm-72.1,61.5-48,32a3.6,3.6,0,0,1-2.2.7,4.5,4.5,0,0,1-1.9-.5A3.9,3.9,0,0,1,108,160V96a3.9,3.9,0,0,1,2.1-3.5,4,4,0,0,1,4.1.2l48,32a3.9,3.9,0,0,1,0,6.6Z"></path></svg>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <div id="body">
+  <section class="body">
+    <div class="form-head">
+      <img height="30%" width="30%" src="images/Alice-rabbit.PNG" alt="" />
+      <h2 class="proposal">GRANT PROPOSAL</h2>
+    </div>
+    <div class="forms">
+    <form action="" onsubmit="details(event)" accept-charset="utf-8">
+      <div class="forms-main">
+        <p class="full-name">Personal Details</p>
+          <span class="form-holder">
+          <div class="mb-3 row">
+            <div class="col-sm-10">
+              <input style="width: 90%" type="text" class="form-control" id="inputPassword" placeholder="alice" required >
+            </div>
+            <label for="inputPassword" class="col-sm-2 col-form-label sml-text">First Name</label>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-10">
+              <input style="width: 90%" type="text" class="form-control" id="inputPassword" placeholder="tom" required>
+            </div>
+            <label for="inputPassword" class="col-sm-2 col-form-label sml-text">Last Name</label>
+        </div>
+        </span>
+      </div>
+        <div class="mb-3 row">
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputPassword" placeholder="e.g alicetom@gmail.com" required>
+          </div>
+          <label for="inputPassword" class="col-sm-2 col-form-label sml-text">Email Address</label>
+        </div>
+          <div class="form-holder">
+          <div class="mb-3 row">
+            <div class="col-sm-10">
+              <input style="width: 90%" type="text" class="form-control" id="inputPassword" placeholder="California" required>
+            </div>
+            <label for="inputPassword" class="col-sm-2 col-form-label sml-text">State</label>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-10">
+              <input style="width: 90%" type="text" class="form-control" id="inputPassword" placeholder="Los Angeles" required>
+            </div>
+            <label for="inputPassword" class="col-sm-2 col-form-label sml-text">City</label>
+        </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-sm-10">
+            <input type="tel" class="form-control" id="inputPassword" placeholder="7863437680" required>
+          </div>
+          <label for="inputPassword" class="col-sm-2 col-form-label sml-text">Phone</label>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputPassword" placeholder="e.g Trucking" required>
+          </div>
+          <label for="inputPassword" class="col-sm-2 col-form-label sml-text">Occupation</label>
+        </div>
+        <div class="form-holder">
+          <div class="mb-3 row">
+            <div class="col-sm-10">
+              <select style="width: 90%" class="form-select form-select-lg mb-3 opt" aria-label="Default select example" required>
+                <option value="1" selected hidden >Single</option>
+                <option value="2">Married</option>
+                <option value="3">Engaged</option>
+                <option value="3">Separated</option>
+                <option value="3">Divorced</option>
+              </select>
+            </div>
+            <label for="inputPassword" class="col-sm-2 col-form-label sml-text">Relationship Status</label>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-10">
+              <input style="width: 90%" type="tel" class="form-control" id="inputPassword" placeholder="18" required>
+            </div>
+            <label for="inputPassword" class="col-sm-2 col-form-label sml-text">Age</label>
+        </div>
+        </div>
+        <p class="gender">Gender</p>
+        <div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
+          <label class="form-check-label sml-text" for="inlineRadio1">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" required>
+          <label class="form-check-label sml-text" for="inlineRadio2">Female</label>
+        </div>
+        </div>
+        
+        <p class="gender" style="margin-top: 30px;">Monthly Income</p>
+         <div style="width: 80%; margin-bottom: 30px" class="input-group mb-3">
+           <span class="input-group-text">$</span>
+           <input type="tel" class="form-control" aria-label="Amount (to the nearest dollar)" required>
+           <span class="input-group-text">.00</span>
+         </div>
+        <div class="mb-3 row">
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputPassword" placeholder="e.g frieght transportation" required>
+          </div>
+          <label for="inputPassword" class="col-sm-2 col-form-label sml-text">Description of your business</label>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+            <label for="exampleFormControlTextarea1" class="form-label sml-text" >Reason for applying</label>
+        </div>
+        <center>
+          <button type="submit" onclick="popups()" class="apply-btn" >Submit</button>
+        </center>
+        <!-- start -->
+      </form>
+  </div>
+  </section>
+    <section>
+    <div class="faq-parent">
+    <div class="faq-container" >
+      <div class="faq-box">
+        <h3 class="question">Frequently Asked Questions</h3>
+      </div>
+    </div>
+    <div class="faq-info">
+      <div class="faq-details">
+          <h4 class="faq-header">Who can apply for Hello Alice Grant?</h4>
+          <p class="faq-contents">At Hello Alice we’re focused on business owners.
+          The Small Business Growth Fund provides the capital entrepreneurs need to make their next big move. Each recipient will receive an eligible amount of grant, to accelerate their growth and be successful in their small business.</p>
+          <h4 class="faq-header"> What do I need to do to receive a Grant?</h4>
+          <p class="faq-contents"> Complete an application and process a registration. We ask for a your personal details to confirm your eligibility status, but there is no formal interview process.</p>
+          <h4 class="faq-header"> Is there a registration fee?</h4>
+          <p class="faq-contents">
+            Yes, you are required to make a minimum payment before you can register.
+          </p>
+          <h4 class="faq-header">
+            What happens if I’m unlucky after a registration?
+            </h4>
+          <p class="faq-contents">
+            You will automatically get a refund of your registration fee from our department.
+            We're concerned about your growth and we make it convenient for small business owners to be successful.
+          </p>
+          <h4 class="faq-header">
+            Who decides on the award recipients?
+            </h4>
+          <p class="faq-contents">
+            The team will create a shortlist, then we will ask our community to vote a winner. These votes are taken into consideration as we select the recipient. 
+          </p>
+          <h4 class="faq-header">
+            What are the deadlines for applying?
+            </h4>
+          <p class="faq-contents">
+            2023 deadlines are:
+            <ul class="list">
+              <li>January 29, 2023</li>
+              <li>February 28, 2023</li>
+              <li>May 31, 2023</li>
+            </ul>
+          </p>
+          <h4 class="faq-header">
+            How do i get my grant reward?
+          </h4>
+          <p class="faq-contents">
+            Lucky grant recipients would have funding for their business from the range of 5k - 10k depending on the amount of grant you're eligible for through mastercard or trust wallet.
+          </p>
+          <h4 class="faq-header">
+            When do I receive the money?
+          </h4>
+          <p class="faq-contents">
+            Once you have signed the recipient agreement and processed your authentication and verification on your trust wallet account, we will award the grant. 
+          </p>
+          <h4 class="faq-header">
+            What responsibilities do I have with the award I receive?
+          </h4>
+          <p class="faq-contents">
+            We want to make this as easy as possible for you.
+            We want to share your story of winning the grant, and also where that grant takes you. These stories will likely be in long-form content, published on our website. However, we hope that you see it as a benefit to the change you are making, and that you also promote your activity through your networks. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+
+<footer id="footer">
+    <div class="footer-container">
+      <div class="foot">
+      <img class="jump" width="50%" height="30%" src="images/rabbits.PNG" alt="" />
+      <div class="company-header">
+      <div class="company">
+        <h3 class="titled">Company</h3>
+        <ul>
+          <li>About</li>
+          <li>Leadership</li>
+          <li>Careers</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+          <li>Support Center</li>
+        </ul>
+      </div>
+      <div class="company">
+        <h3 class="titled">Legal</h3>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Cookie Statement</li>
+          <li>Security Statement</li>
+          <li>System Status</li>
+          <li>Release Notes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="downloads">
+      <h3 class="dwn">Download the app</h3>
+      <div class="download-img">
+        <img height="40%" width="40%" class="app" src="images/apple.PNG" alt="" />
+        <img height="40%" width="40%" class="app" src="images/goggle.PNG" alt="" />
+      </div>
+    </div>
+    <div class="medias">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="40" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="16"></circle><rect x="36" y="36" width="184" height="184" rx="48" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><circle cx="180" cy="76" r="12"></circle></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M232,84v40a8,8,0,0,1-8,8,103.2,103.2,0,0,1-48-11.7V156A76,76,0,1,1,86.6,81.2a8,8,0,0,1,6.5,1.7A7.8,7.8,0,0,1,96,89.1v41.6a7.9,7.9,0,0,1-4.6,7.2A20,20,0,1,0,120,156V28a8,8,0,0,1,8-8h40a8,8,0,0,1,8,8,48,48,0,0,0,48,48A8,8,0,0,1,232,84Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M232,128a104.3,104.3,0,0,1-91.5,103.3,4.1,4.1,0,0,1-4.5-4V152h24a8,8,0,0,0,8-8.5,8.2,8.2,0,0,0-8.3-7.5H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,8-8.5,8.2,8.2,0,0,0-8.3-7.5H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0-8,8.5,8.2,8.2,0,0,0,8.3,7.5H120v75.3a4,4,0,0,1-4.4,4C62.8,224.9,22,179,24.1,124.1A104,104,0,0,1,232,128Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M245.7,77.7l-30.2,30.1C209.5,177.7,150.5,232,80,232c-14.5,0-26.5-2.3-35.6-6.8-7.3-3.7-10.3-7.6-11.1-8.8a8,8,0,0,1,3.9-11.9c.2-.1,23.8-9.1,39.1-26.4a108.6,108.6,0,0,1-24.7-24.4c-13.7-18.6-28.2-50.9-19.5-99.1a8.1,8.1,0,0,1,5.5-6.2,8,8,0,0,1,8.1,1.9c.3.4,33.6,33.2,74.3,43.8V88a48.3,48.3,0,0,1,48.6-48,48.2,48.2,0,0,1,41,24H240a8,8,0,0,1,7.4,4.9A8.4,8.4,0,0,1,245.7,77.7Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M212,28H44A16,16,0,0,0,28,44V212a16,16,0,0,0,16,16H212a16,16,0,0,0,16-16V44A16,16,0,0,0,212,28ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,92a12,12,0,1,1,12-12A12,12,0,0,1,88,92Zm96,84a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.8-1.8A36,36,0,0,1,184,140Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M234.3,69.8a23.5,23.5,0,0,0-14.5-16.3C185.6,40.3,131,40.4,128,40.4s-57.6-.1-91.8,13.1A23.5,23.5,0,0,0,21.7,69.8C19.1,79.7,16,97.9,16,128s3.1,48.3,5.7,58.2a23.5,23.5,0,0,0,14.5,16.3c32.8,12.7,84.2,13.1,91.1,13.1h1.4c6.9,0,58.3-.4,91.1-13.1a23.5,23.5,0,0,0,14.5-16.3c2.6-9.9,5.7-28.1,5.7-58.2S236.9,79.7,234.3,69.8Zm-72.1,61.5-48,32a3.6,3.6,0,0,1-2.2.7,4.5,4.5,0,0,1-1.9-.5A3.9,3.9,0,0,1,108,160V96a3.9,3.9,0,0,1,2.1-3.5,4,4,0,0,1,4.1.2l48,32a3.9,3.9,0,0,1,0,6.6Z"></path></svg>
+    </div>
+    <p class="rights">© 2023 Hello Alice. All Rights Reserved.</p>
+    </div>
+  </div>
+  </footer>
+</div>
+  <!--pop up -->
+  
+  <section>
+    <div class="pop-container" id="pop-container">
+      <div class="pop-up">
+          <h4 class="submission">Successful</h3>
+          <!-- <img class="check" id="check-icon" style="margin: 10px" height="30%" width="30%" src="images/check.PNG" alt="" /> -->
+         <img class="pet" id="pet" height="30%" width="30%" src="images/Alice-rabbit.PNG" alt="" />
+          <h4 class="touch">We'll be in touch with you soon</h4>
+          <p class="contact">Kindly contact one of our team for a registration</p>
+          <button style="margin: 0; width: 60%" type="submit" onclick="popout()" class="apply-btn" type="button">Back to home</button>
+      </div>
+    </div>
+  </section>
+  
+  
+</body>
+
+</html>

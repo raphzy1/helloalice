@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Mukta:wght@300;400;500&family=Noto+Sans:wght@100;300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-parent {
+  margin: 40px;
+}
+
+.no {
+  font-size: 13px;
+  font-weight: 300;
+  border: none;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+}

@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Mukta:wght@300;400;500&family=Noto+Sans:wght@100;300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+.payment-main {
+  width: 95%;
+  position: absolute;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 5px #c1c1c1;
+}
+
+.overlay {
+  background-color: #c6c6c6;
+}
+
+.payment-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.btnss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 5px;
+  width: 100%;
+}
+
+.pay {
+  width: 100%;
+  height: 40px;
+  /* background: #F0F0F069;*/
+  background: transparent;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.pay:hover {
+  /*?background: #DBDBDB;*/
+  border-bottom: 2px solid #007bff;
+  transition: 0.3s ease-in-out;
+}
+
+.pay:hover .active {
+  border-bottom: none;
+}
+
+.month {
+  color: #828282 !important;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+
+.card-form {
+  margin: 20px;
+}
+
+.cards {
+  border: 1px solid #e6e6e694;
+}
+
+.cards[type="text"] {
+  color: #828282 !important;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+
+.cards[type="tel"] {
+  color: #828282 !important;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+}
+
+.card-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.checkout {
+  width: 100%;
+  height: 40px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  border: none;
+  margin: 0px 0 20px 0;
+}
+
+.checkout-2 {
+  width: 100%;
+  height: 40px;
+  background-color: #41ca7f;
+  color: #ffffff;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  border: none;
+}
+
+.confirm {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.options {
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #6c6c6c;
+}
+
+.fee-parent {
+  width: 100%;
+  position: relative;
+}
+
+.fee {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #535353;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+}
+.paypal-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.paypal-image {
+  margin: 20px;
+}
+
+.paypal-details {
+  width: 90%;
+  height: 30vh;
+  border: 1px solid #d0d0d078;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.paypal-tag {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tag-header {
+  color: #9f9f9f;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  align-self: flex-start;
+  text-transform: uppercase;
+}
+
+.tag {
+  color: #797979;
+  font-family: "Lora", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  align-self: flex-start;
+}
+
+.copy-icon {
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 10px;
+  background: #179bd7;
+  border-radius: 5px;
+  color: #eaeaea;
+  margin: 5px;
+}
+
+.pay-title {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
